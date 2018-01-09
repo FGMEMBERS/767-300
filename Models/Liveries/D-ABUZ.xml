@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Condor Flugdienst (D-ABUZ)</name>
+            <texture>Liveries/D-ABUZ.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

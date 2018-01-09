@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Delta Air Lines (1962-1997)</name>
+            <texture>Liveries/DAL_1962-1997.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

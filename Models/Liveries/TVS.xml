@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PropertyList>
+  <sim>
+    <model>
+      <livery>
+        <name type="string">Travel Service</name>
+        <texture>Liveries/TVS.png</texture>
+      </livery>
+    </model>
+  </sim>
+</PropertyList>

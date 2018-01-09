@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Gulf Air</name>
+            <texture>Liveries/GFA.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

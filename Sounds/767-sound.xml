@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <!-- Custom 767-300 Sound Effects by Liam Gathercole -->
+<!-- New sounds: New GPWS Fixes etc by Gabriel Hernandez -->
 
 <PropertyList>
 
@@ -265,47 +266,6 @@
         <max-dist>200.0</max-dist>
     </gear1>
 
-<squeal0>
-        <name>squeal</name>
-        <path>/Aircraft/767-300/Sounds/touchdown.wav</path>
-        <condition>
-            <or>
-                <property>/gear/gear[0]/wow</property>
-                <property>/gear/gear[1]/wow</property>
-                <property>/gear/gear[2]/wow</property>
-            </or>
-        </condition>
-        <volume>
-            <property>sim/sound/Ovolume</property>
-        </volume>
-        <volume>
-            <property>/velocities/speed-down-fps</property>
-            <factor>0.05</factor>
-        </volume>
-        <volume>
-            <property>/velocities/airspeed-kt</property>
-            <factor>0.01</factor>
-        </volume>
-        <volume>
-            <internal>dt_stop</internal>
-            <factor>0.05</factor>
-            <max>1.0</max>
-        </volume>
-        <pitch>
-            <property>/velocities/airspeed-kt</property>
-            <factor>0.0025</factor>
-            <offset>1.2</offset>
-        </pitch>
-        <position>
-            <x>-6.5</x>
-            <y>0</y>
-            <z>-5</z>
-        </position>
-        <reference-dist>20.0</reference-dist>
-        <max-dist>400.0</max-dist>
-    </squeal0>
-
-
     <squeal1>
       <name>squeal</name>
       <path>Aircraft/767-300/Sounds/touch.wav</path>
@@ -383,39 +343,10 @@
         <max-dist>2.0</max-dist>
     </wind>
 
-    <!--stall>
-        <name>stall</name>
-        <mode>looped</mode>
-        <path>/Aircraft/767-300/Sounds/stall.wav</path>
-        <condition>
-            <less-than>
-                <property>velocities/airspeed-kt</property>
-                <value>150</value>
-            </less-than>
-            <not>
-                <property>/gear/gear[0]/wow</property>
-                <property>/gear/gear[1]/wow</property>
-                <property>/gear/gear[2]/wow</property>
-                <property>/surface-positions/flap-pos-norm</property>
-                <property>/gear/gear[0]/position-norm</property>
-            </not>
-        </condition>
-        <volume>
-            <max>0.5</max>
-        </volume>
-        <position>
-            <x>-23</x>
-            <y>0</y>
-            <z>1</z>
-        </position>
-        <reference-dist>1.0</reference-dist>
-        <max-dist>2.0</max-dist>
-    </stall-->
-
     <stall>
         <name>stall</name>
         <mode>looped</mode>
-        <path>/Aircraft/767-300/Sounds/stall.wav</path>
+        <path>Aircraft/767-300/Sounds/stall.wav</path>
         <condition>
             <less-than>
                 <property>velocities/airspeed-kt</property>
@@ -443,7 +374,7 @@
     <stall>
         <name>stall</name>
         <mode>looped</mode>
-        <path>/Aircraft/767-300/Sounds/stall.wav</path>
+        <path>Aircraft/767-300/Sounds/stall.wav</path>
         <condition>
             <less-than>
                 <property>velocities/airspeed-kt</property>
@@ -508,22 +439,6 @@
         <max-dist>2.0</max-dist>
     </switch>
 
-    <!--speedbrake>
-        <name>speedbrake</name>
-        <mode>in-transit</mode>
-        <path>Aircraft/767-300/Sounds/whine.wav</path>
-        <volume>
-            <factor>0.45</factor>
-        </volume>
-        <position>
-            <x>5</x>
-            <y>0</y>
-            <z>0</z>
-        </position>
-        <reference-dist>2.0</reference-dist>
-        <max-dist>5.0</max-dist>
-    </speedbrake-->
-
     <engines>
         <name>left reverse-thrust</name>
         <mode>looped</mode>
@@ -583,250 +498,6 @@
   </pitch>
 </crash>
 
-<!-- Cockpit GPWS -->
-
-        <!--altitude1>
-            <name>alt-10</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-10.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>10</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude1>
-
-        <altitude2>
-            <name>alt-20</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-20.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>20</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude2>
-
-        <altitude3>
-            <name>alt-30</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-30.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>30</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude3>
-
-        <altitude4>
-            <name>alt-40</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-40.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>40</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude4>
-
-        <altitude5>
-            <name>alt-50</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-50.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>50</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude5>
-
-        <altitude6>
-            <name>alt-100</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-100.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>100</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude6>
-
-        <altitude7>
-            <name>alt-200</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-200.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>200</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude7>
-
-        <altitude8>
-            <name>alt-300</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-300.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>300</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude8>
-
-        <altitude9>
-            <name>alt-400</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-400.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>400</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude9>
-
-        <altitude10>
-            <name>alt-500</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-500.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>500</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude10>
-
-        <altitude11>
-            <name>alt-1000</name>
-            <reference-dist>1.0</reference-dist>
-            <max-dist>2.0</max-dist>
-            <mode>once</mode>
-            <path>Aircraft/767-300/Sounds/altitude-1000.wav</path>
-            <condition>
-				<less-than-equals>
-                    		<property>position/altitude-agl-ft</property>
-                    		<value>1000</value>
-                  	</less-than-equals>
-            </condition>
-            <volume>
-                <property>sim/sound/Evolume</property>
-            </volume>
-            <position>
-                <x>-5</x>
-                <y>0</y>
-                <z>0</z>
-            </position>
-        </altitude11-->
-
 <!-- Cabin -->
 
     <apoff>
@@ -840,8 +511,6 @@
             <property>sim/sound/effects/volume</property>
         </volume>
     </apoff>
-
-
 
 <seatbelt>
 <name>Seatbelt</name>
@@ -1054,6 +723,174 @@
  <reference-dist>10.0</reference-dist>
  <max-dist>100.0</max-dist>
 </safety>
+    
+                    <avionics>
+			<name>avionics</name>
+			<path>Aircraft/767-300/Sounds/avionics.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<greater-than>
+			<property>systems/electrical/outputs/efis</property>
+					<value>0</value>
+				</greater-than>
+			</condition>
+			<position>
+				<x>-17</x>
+				<y>0.01</y>
+				<z>-1.95</z>
+			</position>	
+			<volume>
+				<factor>0.2</factor>
+				<max>0.5</max>
+			</volume>
+			<reference-dist>1.2</reference-dist>
+			<max-dist>5</max-dist>
+		</avionics>
+
+        <appr_mins>
+        <name>appr_mins</name>
+        <mode>once</mode>
+        <type>avionics</type>		
+        <path>Aircraft/767-300/Sounds/approaching-minimums.wav</path>
+        <condition>
+			<less-than>
+				<property>/position/altitude-agl-ft</property>
+				<value>380</value>
+			</less-than>
+			<greater-than>
+				<property>/position/altitude-agl-ft</property>
+				<value>300</value>
+			</greater-than>			
+			<less-than>
+				<property>/velocities/vertical-speed-fps</property>
+				<value>0</value>
+			</less-than>
+		</condition>
+          </appr_mins>
+	   
+		
+		<seatbelt>
+			<name>cabinalert</name>
+			<path>Aircraft/767-300/Sounds/cabinalert.wav</path>
+			<mode>once</mode>
+			<condition>
+				<or>
+					<property>sim/sound/no-smoking-sign</property>
+					<property>sim/sound/seatbelt-sign</property>
+					
+					<not><property>sim/sound/no-smoking-sign</property></not>
+					<not><property>sim/sound/seatbelt-sign</property></not>
+				</or>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+			</volume>
+		</seatbelt>
+	
+	    
+		<wow>
+			<name>wow 0</name>
+			<mode>once</mode>
+			<path>Aircraft/767-300/Sounds/wow.wav</path>
+			<condition>
+				<property>gear/gear[0]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		
+                 <wow>
+			<name>wow 1</name>
+			<mode>once</mode>
+			<path>Aircraft/767-300/Sounds/wow.wav</path>
+			<condition>
+				<property>gear/gear[1]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		
+                 <wow>
+			<name>wow 2</name>
+			<mode>once</mode>
+			<path>Aircraft/767-300/Sounds/wow.wav</path>
+			<condition>
+				<property>gear/gear[2]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		
+		<wow>
+			<name>wow 3</name>
+			<mode>once</mode>
+			<path>Aircraft/767-300/Sounds/wow.wav</path>
+			<condition>
+				<property>gears/gear[0]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		  
+                 <wow>
+		 	<name>wow 4</name>
+			<mode>once</mode>
+			<path>Aircraft/767-300/Sounds/wow.wav</path>
+			<condition>
+				<property>gears/gear[1]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+		
+                 <wow>
+			<name>wow 5</name>
+			<mode>once</mode>
+			<path>Aircraft/767-300/Sounds/wow.wav</path>
+			<condition>
+				<property>gears/gear[2]/wow</property>
+			</condition>
+			<volume>
+				<property>sim/current-view/internal</property>
+				<offset>0</offset>
+			</volume>
+		</wow>
+
+       <rain>
+      <name>rain</name>
+      <mode>looped</mode>
+      <path>Aircraft/767-300/Sounds/rain.wav</path>
+      <condition>
+        <greater-than>
+          <property>/environment/rain-norm</property>
+          <value>0.2</value>
+        </greater-than>
+      </condition>
+      <volume>
+        <property>/environment/rain-norm</property>
+        <factor>1.00</factor>
+        <offset>0.00</offset>
+        <min>0.4</min>
+        <max>0.9</max>
+      </volume>
+      <pitch>
+        <property>/velocities/airspeed-kt</property>
+        <factor>0.001</factor>
+        <offset>1.0</offset>
+      </pitch>
+    </rain>
+
 
 </fx>
 

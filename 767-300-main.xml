@@ -296,6 +296,17 @@ Service Ceiling: 39,000ft
        			</script>
 		    </binding>
      		</item>
+<item>
+
+                <label>System Failures</label>
+					<binding>
+                            <command>nasal</command>
+                            <script>
+                             var failures = gui.Dialog.new("sim/gui/dialogs/failures/dialog", "Aircraft/767-300/Systems/failures-dlg.xml");
+                             failures.open();
+                            </script>
+                    </binding>
+            </item>
 
 	    </menu>
 	  </default>
@@ -433,9 +444,9 @@ Service Ceiling: 39,000ft
 		<fmc>
 			<to-flap type="double">5</to-flap>
 			<vspeeds>
-				<V1 type="double">0</V1>
-				<VR type="double">0</VR>
-				<V2 type="double">0</V2>
+				<V1 type="double">148</V1>
+				<VR type="double">160</VR>
+				<V2 type="double">165</V2>
 			</vspeeds>
 		</fmc>
 
@@ -457,7 +468,7 @@ Service Ceiling: 39,000ft
 	                </category-13>
 	            </configuration-module>
 	            <voice>
-	                <file-prefix type="string">Sounds/mk-viii/</file-prefix>
+	                <file-prefix type="string">Aircraft/767-300/Sounds/GPWS/</file-prefix>
 	            </voice>
 	            <inputs>                            <!-- Module I/O -->
 	                <arinc429>
@@ -477,7 +488,7 @@ Service Ceiling: 39,000ft
 		    <speaker>                           <!-- Speaker Configuration -->
 	                <max-dist type="double"> 5 </max-dist>        <!-- Max. distance where speaker is heard -->
 	                <reference-dist type="double"> 2 </reference-dist> <!-- Distance to pilot -->
-	                <volume type="double"> 0.6 </volume>          <!-- Volume at reference distance -->
+	                <volume type="double"> 1.0 </volume>          <!-- Volume at reference distance -->
 	            </speaker>
 	        </mk-viii>
 
@@ -662,9 +673,7 @@ Service Ceiling: 39,000ft
     	    </walk>
 
 	    <!-- A randomized failure system. Optional. Uncomment to activate: -->
-    	    <!--failures>
-	    	<file>Aircraft/767-300/Nasal/Failures.nas</file>
-   	    </failures-->
+    	    
 	    <v-speeds>
 		<file>Aircraft/767-300/Nasal/v-speeds.nas</file>
 	    </v-speeds>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+by GabrielYV
+    -->
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Santa Barbara</name>
+            <texture>Liveries/SBA.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

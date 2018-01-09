@@ -3,6 +3,22 @@
     <sim>
 	<description>Boeing 767-300ER</description>
 	<author>Liam Gathercole and Isaias V. Prestes (model, animations), Juuso Tapaninen (cockpit), John Williams (FDM, systems)</author>
+
+	<tags>
+		<tag>transport</tag>
+		<tag>boeing</tag>
+		<tag>jet</tag>
+		<tag>retractable-gear</tag>
+		<tag>glass-cockpit</tag>
+		<tag>ifr</tag>
+		<tag>2010s</tag>
+		<tag>2000s</tag>
+		<tag>1990s</tag>
+		<tag>1980s</tag>
+		<tag>etops</tag>
+		<tag>twin-engine</tag>
+	</tags>
+
 	<status>alpha</status>
 	<rating>
 		<FDM type="int">2</FDM>
