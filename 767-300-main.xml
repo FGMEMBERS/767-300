@@ -347,6 +347,7 @@ Service Ceiling: 39,000ft
         <allow-toggle-cockpit>true</allow-toggle-cockpit>
 
 	<multiplay>
+            <fallback-model-index type="int">251</fallback-model-index>
        	    <generic>
           	<int n="0" type="int">  0 </int>  <!-- Dual Control boolean light switches-->
 		<int n="2" alias="/systems/electrical/lighting/beacon"/>
