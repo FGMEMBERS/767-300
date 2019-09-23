@@ -25,6 +25,7 @@
 		<position-z-m type="float"> -1.8</position-z-m>
 		<jetway-hood-deg type="float">4</jetway-hood-deg>
 	    </door>
+	    <fallback-model-index type="int">251</fallback-model-index>
         </model>
 
 	<view n="0">

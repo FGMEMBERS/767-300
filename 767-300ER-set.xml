@@ -36,6 +36,7 @@
 	    <!--winglets type="bool">true</winglets-->
 	    <variant type="int">1</variant>
         </model>
+        <variant-of>767-300</variant-of>
 
         <menubar>
             <default>
