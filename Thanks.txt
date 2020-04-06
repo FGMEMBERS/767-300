@@ -8,3 +8,6 @@ Emmanuel Baranger for the shadow code, matching that of the 737-100.
 Keita Yokoyama for providing recorded cockpit announcements.
 Gijs de Rooy for providing the Cockpit Seatbelt chime effect.
 xSaint for his engine moisture code and non-CVS pushback codes.
+Liam Gathercole and Isaias V. Prestes (model, animations)
+Juuso Tapaninen (cockpit) 
+John Williams (FDM, systems)
