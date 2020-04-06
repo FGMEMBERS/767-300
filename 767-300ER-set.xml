@@ -2,7 +2,7 @@
 <PropertyList include="767-300-main.xml">
     <sim>
 	<description>Boeing 767-300ER</description>
-	<author>Liam Gathercole and Isaias V. Prestes (model, animations), Juuso Tapaninen (cockpit), John Williams (FDM, systems)</author>
+	<author>Liam Gathercole and Isaias V. Prestes, Juuso Tapaninen, John Williams, Gabriel Hernandez (YV3399)</author>
 
 	<tags>
 		<tag>transport</tag>
@@ -21,10 +21,10 @@
 
 	<status>alpha</status>
 	<rating>
-		<FDM type="int">2</FDM>
+		<FDM type="int">3</FDM>
 		<systems type="int">4</systems>
 		<cockpit type="int">4</cockpit>
-		<model type="int">2</model>
+		<model type="int">3</model>
 	</rating>
 	<aircraft-version>20151000</aircraft-version>
 	<flight-model>yasim</flight-model>

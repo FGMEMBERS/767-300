@@ -1,19 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- Boeing 767-300 Failures
-     Gabriel Hernandez(YV3399)
--->
+<!-- B767 Aircraft Config Dialog -->
 
 <PropertyList>
-	<name>failures</name>
+
+	<name>aircraft-config-fail</name>
 	<layout>vbox</layout>
 
-	<text>
-		<label>Boeing 767-300 Failures</label>
-	</text>
+<!-- System Failures By Gabriel Hernandez(YV-3399) -->
+
+    <group>
+        <layout>hbox</layout>
+        <text>
+            <halign>left</halign>
+            <label>Failures</label>
+        </text>
+        <button>
+            <halign>right</halign>
+            <pref-width>20</pref-width>
+            <pref-height>20</pref-height>
+            <legend>X</legend>
+            <key>Esc</key>
+            <binding>
+                <command>dialog-close</command>
+            </binding>
+        </button>
+    </group>
 	
-                
-	<hrule />
+    <hrule/>
+	
 		<group>
 		<layout>vbox</layout>
 		
@@ -124,7 +139,20 @@
 		</binding>
 		<live>true</live>
 	</checkbox>
-</group>
+	
+	<checkbox>
+		<label>APU fire</label>
+		<binding>
+			<command>dialog-apply</command>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>
+			setprop("/controls/fires/fire[2]/on-fire", 1);
+			</script>
+		</binding>
+		<live>true</live>
+	</checkbox>
 </group>
 
 	<hrule />
@@ -145,19 +173,6 @@
 			</script>
 		</binding>
 	</button>
-		<button>
-			<legend>Close</legend>
-			<default>true</default>
-			<key>Esc</key>
-		<padding>1</padding>
-			<binding>
-				<command>dialog-apply</command>
-			</binding>
-			<binding>
-				<command>dialog-close</command>
-			</binding>
-		</button>
-		
-		</group>
+</group>
 
 </PropertyList>
